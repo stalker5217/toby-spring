@@ -1,6 +1,6 @@
 package com.springbook.chapter01.controller;
 
-import com.springbook.chapter01.dao.UserDao1;
+import com.springbook.chapter01.dao.s1.UserDao;
 import com.springbook.chapter01.domain.User;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -11,7 +11,7 @@ import java.sql.SQLException;
 public class TestController {
     @GetMapping("/chapter01/userdao1")
     public String userdao1() throws SQLException, ClassNotFoundException {
-        UserDao1 dao = new UserDao1();
+        UserDao dao = new UserDao();
 
         User user = new User();
         user.setId("stalker");

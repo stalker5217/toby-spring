@@ -1,4 +1,4 @@
-package com.springbook.chapter01.dao;
+package com.springbook.chapter01.dao.s1;
 
 import com.springbook.chapter01.domain.User;
 import java.sql.*;
@@ -12,7 +12,7 @@ import java.sql.*;
  * 하지만 이런 식으로 구현하면 형사처벌을 피할 수 없다.
  */
 
-public class UserDao1 {
+public class UserDao {
     public void add(User user) throws ClassNotFoundException, SQLException{
         // DB 연결을 위한 Connection을 가져온다.
         Class.forName ("org.h2.Driver");
