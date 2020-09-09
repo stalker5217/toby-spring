@@ -4,9 +4,11 @@ import com.springbook.chapter01.domain.User;
 import java.sql.*;
 
 /**
- * JDBC를 이용한 사용자 등록과 조회 기능이 있는 UserDao Class
+ * 1.1 초난감 DAO
  *
- * 동작하는 코드다.
+ * JDBC를 이용한 사용자 등록과 조회 기능이 있는 UserDao Class.
+ *
+ * 분명히 동작하는 코드다.
  * 하지만 이런 식으로 구현하면 형사처벌을 피할 수 없다.
  */
 
