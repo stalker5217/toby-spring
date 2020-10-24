@@ -8,18 +8,10 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 
 public class UserDao {
-    // Single instance
-    private static UserDao instance;
     private final ConnectionMaker connectionMaker;
 
-    // Constructor을 private로 선언
     public UserDao(ConnectionMaker connectionMaker){
         this.connectionMaker = connectionMaker;
-    }
-    // ConnectionMaker를 넣어주는 것도 애매하다
-    public static synchronized UserDao getInstance(){
-        if(instance == null) instance = new UserDao(null);
-        return instance;
     }
 
     public void add(User user) throws ClassNotFoundException, SQLException {
