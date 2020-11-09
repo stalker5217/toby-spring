@@ -74,6 +74,10 @@ public class UserDaoTest {
         assertThat(userget2.getPassword()).isEqualTo(user2.getPassword());
     }
 
+    /**
+     * 예외 상황에 대한 테스트
+     * 존재하지 않는 사용자를 읽으려하면 EmptyResultDataAccessException가 발생해야 한다.
+     */
     @Test(expected = EmptyResultDataAccessException.class)
     public void getUserFailure() throws SQLException, ClassNotFoundException {
         dao.deleteAll();
